@@ -13,26 +13,6 @@ import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 
 const store = configureStore();
-store.subscribe(() => {
-    const state = store.getState();
-    console.log(getVisibleExpenses(state.expenses, state.filters));
-});
-
-store.dispatch(addExpense({
-    description: 'water bill',
-    amount: '300',
-    createAt: 9000
-}));
-store.dispatch(addExpense({
-    description: 'gas bill',
-    amount: '450',
-    createAt: 94000
-}));
-store.dispatch(addExpense({
-    description: 'rent',
-    amount: '155000',
-    createAt: 0
-}));
 
 const jsx = (
     <Provider store={store}>

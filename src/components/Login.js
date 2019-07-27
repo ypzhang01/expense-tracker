@@ -1,11 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { startLogin } from '../actions/auth' 
+import { startLogin } from '../actions/auth'
 
 export const LoginPage = ({ startLogin }) => (
-    <div>
-        <h1>Login</h1>
-        <button onClick={startLogin}>Login</button>
+    <div className="box-layout">
+        <div className="box-layout__box">
+            <h1 className="box-layout__title">Expense Tracker</h1>
+            <p>Let recording each expense be your new habbit.</p>
+            <button className="button" onClick={startLogin}>Login with Google</button>
+        </div>
     </div>
 )
 
